@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.premid.app/metadata/1.7",
+	"author": {
+		"name": "nFin1ty",
+		"id": "131877010157862912"
+	},
+	"service": "ERTFLIX",
+	"description": {
+		"en": "ERT's OTT (Over The Top) platform provides free VoD and Live streaming services to its users in all content categories (movies, series, documentaries, animation, sports, archive material, etc.) with a common viewing experience in all screens (smart TVs, cellphones, tablets, computers, set-top boxes).",
+		"el_GR": "Η OTT (Over The Top) πλατφόρμα της ΕΡΤ παρέχει στους χρήστες της δωρεάν υπηρεσίες streaming VoD και Live περιεχομένου σε όλες τις κατηγορίες προγράμματος (ταινίες, σειρές, ντοκιμαντέρ, παιδικά, αθλητικά, αρχειακό υλικό, κλπ) με κοινή εμπειρία θέασης σε όλες τις οθόνες (smart TVs, κινητά, ταμπλέτες, υπολογιστές, set-top boxes)."
+	},
+	"url": "www.ertflix.gr",
+	"version": "1.0.0",
+	"logo": "https://i.imgur.com/rISjtPf.png",
+	"thumbnail": "https://i.imgur.com/9aLadZc.png",
+	"color": "#ea1d57",
+	"category": "videos",
+	"tags": [
+		"ert",
+		"greek",
+		"series",
+		"movies",
+		"ott"
+	]
+}
