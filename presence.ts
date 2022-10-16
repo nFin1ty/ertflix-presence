@@ -10,11 +10,21 @@ presence.on("UpdateData", async () => {
 		largeImageKey: "logo",
 	};
 
-	if (document.location.href.includes("/vod/")) {
-		let title = document.querySelector<HTMLSpanElement>("span[class^='AssetTitles__title']").textContent;
-		let year = document.querySelector<HTMLUListElement>("ul[class^='VodDetails'] li").textContent;
+	if (document.location.href.includes("/vod/") || document.location.href.includes("/series/")) {
+		let title = document.querySelector<HTMLSpanElement>("span[class^='AssetTitles__title']").textContent.trim();
 		presenceData.largeImageKey = poster;
-		presenceData.state = `${title} (${year})`;
+		if (document.location.href.includes("/vod/")) {
+			let episodeText = document.querySelectorAll<HTMLLIElement>("ul[class^='VodDetails'] li")[2].textContent;
+			let year = document.querySelector<HTMLLIElement>("ul[class^='VodDetails'] li").textContent;
+			if (episodeText.includes("επεισόδιο")) {
+				let episodeNumber = episodeText.split(" ")[1];
+				presenceData.state = `${title} – Επεισόδιο ${episodeNumber} (${year})`;
+			} else {
+				presenceData.state = `${title} (${year})`;
+			}
+		} else {
+			presenceData.state = title;
+		}
 		presenceData.buttons = [
 			{
 				label: "Παρακολούθηση",
